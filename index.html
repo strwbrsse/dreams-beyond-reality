@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10152e">
+<title>Bunny Girl Senpai: Dreams Beyond Reality</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="app-shell">
+  <div class="sky" aria-hidden="true"><div class="moon"></div><div class="stars" id="stars"></div><div class="horizon"></div></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">✦</span><span>DREAMS <i>BEYOND REALITY</i></span></div>
+    <div class="top-actions"><button class="quiet" data-action="continue" id="continueTop" hidden>Continue ↗</button><button class="icon-button" data-action="settings" aria-label="Settings">⚙</button></div>
+  </header>
+  <main id="screen" class="screen">
+    <section id="mainMenu" class="menu-screen">
+      <div class="eyebrow">AN INTERACTIVE SUPERNATURAL MYSTERY</div>
+      <h1>Bunny Girl Senpai:<br><em>Dreams Beyond Reality</em></h1>
+      <p class="lead">Some dreams are memories. Some are warnings.<br>And some are asking to be remembered.</p>
+      <div class="menu-buttons">
+        <button class="primary" data-action="start">Start New Story <span>→</span></button>
+        <button data-action="continue" id="continueBtn" hidden>Continue</button>
+        <button data-action="chapters">Chapters</button>
+        <button data-action="settings">Settings</button>
+        <button data-action="credits">Credits</button>
+      </div>
+      <div class="menu-foot"><span>Minegahara High School · Shichirigahama</span><span>VOL. 01 — THE UNREMEMBERED</span></div>
+    </section>
+    <section id="gameScreen" class="game-screen" hidden>
+      <div class="scene-heading"><span id="chapterKicker">PROLOGUE</span><span id="progressText">SCENE 1</span></div>
+      <div class="scene-art" id="sceneArt"><div class="art-sun"></div><div class="art-building"></div><div class="art-rail"></div><div class="art-label" id="locationLabel">MINEGAHARA STATION</div></div>
+      <div class="hud-row"><div class="chapter-progress"><span id="progressBar"></span></div><button class="hud-button" data-action="journal">Journal <b>⌕</b></button><button class="hud-button" data-action="backlog">Backlog <b>↟</b></button><button class="hud-button" data-action="pause">Pause <b>Ⅱ</b></button></div>
+      <div class="dialogue-panel" id="dialoguePanel">
+        <div class="speaker-row"><span id="speakerName">NARRATION</span><span class="speaker-line"></span><span id="relationshipToast"></span></div>
+        <div id="dialogueText" class="dialogue-text" aria-live="polite"></div>
+        <div id="choiceList" class="choice-list" hidden></div>
+        <div class="dialogue-footer"><span id="typeHint">CLICK OR TAP TO CONTINUE</span><button id="nextBtn" class="next-button" data-action="next">Next <span>→</span></button></div>
+      </div>
+      <div class="game-tools"><button data-action="save">Save</button><button data-action="load">Load</button><button data-action="settings">Settings</button><button data-action="menu">Main Menu</button></div>
+    </section>
+  </main>
+  <div id="modalLayer" class="modal-layer" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+<script src="characters.js"></script>
+<script src="story.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
